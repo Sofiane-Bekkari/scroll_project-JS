@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-transform: capitalize;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* nav */
+.nav-center {
+    background-color: #fffffffa;
+}
+
+/* logo */
+.logo {
+    width: 60px;
+    margin-top: .5rem;
+    padding: .5rem;
+}
+/* button toggle*/
+.nav-toggle {
+    border:none;
+    font-size: 25px;
+    background-color: rgba(35, 211, 138, 0);
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    top: 28px;
+    right: 15px;
+    transition: all 1s;
+}
+.nav-toggle:hover {
+    color: #01c4429f;
+}
+
+/* links container */
+.links-container {
+    padding: 0rem;
+    /*display: block;*/
+    display: none;
+}
+
+/* ul list */
+.links {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+/* li list */
+li {
+    margin: 0;
+    padding: 0;
+}
+/* a tag */
+a {
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    display:block;
+    padding: .5rem 0  1rem .5rem; 
+    margin: 0;
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all .5s;
+}
+a:hover{
+    color: #01c4429f;
+    letter-spacing: 3px;
+}
+li:hover {
+    background-color: #88888834;
+}
+
+/* banner */
+.banner {
+    background: linear-gradient(
+        rgba(134, 204, 189, 0.589),
+        rgba(62, 68, 68, 0.637)),
+        url(./programing-area.jpg) no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 70vh;
+}
+.container {
+    padding: 1.5rem;
+}
+h1 {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #222;
+    font-size: 2.5rem;
+}
+p {
+    color: #222;
+}
+
+/* btn-white */
+.btn-white {
+    border: solid 2px;
+    padding: .3rem;
+    margin: 0 auto;
+    color: #eee;
+    letter-spacing: 2px;
+    transition: all 1s;
+    width: 180px;
+}
+.btn-white:hover {
+    border: solid 1px;
+    background-color: #239c825b;
+}
+
+/* sections */
+.section {
+    border: solid;
+    text-align: center;
+    height: 50vh;
+}
+.title {
+    letter-spacing: 3px;
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+    text-transform: uppercase;
+}
+h2 {
+    border: solid;
+    padding-top: 0;
+    margin: 0;
+    font-weight: 750;
+}
+span {
+    color: #01c4429f;
+}
