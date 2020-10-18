@@ -9,13 +9,12 @@ body {
 .nav-center {
     background-color: #fffffffa;
     height: 10vh;
-    z-index: 99;
-    /*overflow: hidden;*/
+    overflow: hidden;
     transition: all 1s;
 }
 .nav-header {
-    border: solid blue;
-    z-index: 99;
+    height: 10vh;
+    padding: 0 1rem 0rem 1rem;
 }
 /* logo */
 .logo {
@@ -30,8 +29,9 @@ body {
     background-color: rgba(35, 211, 138, 0);
     display: block;
     position: absolute;
+    outline: none;
     cursor: pointer;
-    top: 28px;
+    top: 25px;
     right: 15px;
     transition: all 1s;
 }
@@ -42,21 +42,16 @@ body {
 /* links container */
 .links-container {
     padding: 0rem;
-    background-color: white;
     height: 0;
-    transform: translateY(-350px);
-    z-index: -9;
-    visibility: hidden;
+    overflow: hidden;
+    background-color: white;
     transition: all 1s;
 }
 /* show-nav */
 .show-nav {
-    z-index: -9;
-    transform: translateY(-5px);
-    display: block;
+    overflow: visible;
     visibility: visible;
     transition: all 1s;
-    height: auto;
 }
 
 /* ul list */
@@ -67,7 +62,6 @@ body {
 }
 /* li list */
 li {
-    z-index: -1;
     margin: 0;
     padding: 0;
 }
@@ -77,11 +71,11 @@ a {
     color: #000;
     text-transform: uppercase;
     display:block;
-    padding: .5rem 0  1rem .5rem; 
+    padding: .5rem 0  1rem 1rem; 
     margin: 0;
     letter-spacing: 1px;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 17px;
     transition: all .5s;
 }
 a:hover{
@@ -103,7 +97,7 @@ li:hover {
     justify-content: center;
     text-align: center;
     align-items: center;
-    height: 70vh;
+    height: 90vh;
 }
 .container {
     padding: 1.5rem;
@@ -112,9 +106,13 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #222;
+    margin: 0;
+    padding: 0;
     font-size: 2.5rem;
 }
 p {
+    padding: 0;
+    margin-bottom: 2rem;
     color: #222;
 }
 
@@ -177,4 +175,96 @@ span {
     border: solid;
     padding: .5rem;
     border-radius: 50px;
+}
+
+/* Add media query at 800px*/
+@media screen and (min-width: 800px){
+
+    #nav {
+        border: solid hotpink;
+        /* here scroll */
+        height: 0;
+
+    }
+
+    .container-nav {
+        width:95% ;
+        height: 10vh;
+        margin: 0 auto;
+        background: none;
+        display: flex;
+        justify-content: space-between;
+        
+    }
+
+    .logo {
+        width: 70px;
+        margin: .5rem 0;
+        padding: 0;
+    }
+
+    .nav-center {
+        height: 10vh;
+        background: none;
+        display: flex;
+        justify-content: space-around;
+        overflow: visible;
+        transition: all 1s;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background: none;
+        width: 400px;
+     
+
+    }
+    .links-container {
+        background: none;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        /*visibility: hidden;*/
+    }
+
+    a.scroll-link {
+        padding: 0;
+        margin: 0;
+    }
+
+    .banner {
+        padding: 0 5rem;
+    }
+    h1 {
+        font-size: 60px;
+    }
+    .title {
+        font-size: 20px;
+    }
+   
+}
+
+/* media query at 1200 px*/
+@media screen and (min-width: 1200px){
+
+    .container-nav {
+        width:80% ;
+    }
+
+    .banner p {
+        width: 60%;
+        padding: 1rem 0 2rem 0;
+        margin: auto;
+    }
+    .title {
+        font-size: 25px;
+    }
 }
