@@ -61,19 +61,22 @@ linkScrolling.forEach(function(link) {
         const element = document.getElementById(id);
         //console.log(id)
         // calculate the heights of nav
-        const navHeight = navFix.getBoundingClientRect().height; 
+        const navHeight = linkContainer.getBoundingClientRect().height; 
         console.log(navHeight, 'is the nav height')
         // add varaible for fixed nav
         const fixedNav = navFix.classList.contains("nav-fixed")
-        console.log(fixedNav);
+        console.log(fixedNav,'fixed');
         let position = element.offsetTop - navHeight;
         console.log(position, 'is the posistion')
 
         if (!fixedNav) {
-            position = position - navHeight;
+            position = position;
+            console.log(position, "works")
         }
+       //else {
+       //     position = position 
+       // }
     
-
         // add window scrollTo
         window.scrollTo({
             left:0,

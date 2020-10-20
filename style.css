@@ -144,7 +144,8 @@ p {
 /* sections */
 .section {
     text-align: center;
-    height: 50vh;
+    height: 80vh;
+    z-index: -9;
 }
 .title {
     letter-spacing: 3px;
