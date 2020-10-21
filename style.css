@@ -163,11 +163,7 @@ h2 {
 span {
     color: #01c4429f;
 }
-/* tours */
-#tours {
-    position: relative;
 
-}
 /* footer */
 .section-footer {
     height: 15vh;
@@ -185,6 +181,7 @@ span {
     border: solid;
     padding: 1rem .2rem;
     border-radius: 100px;
+    z-index: 99;
     visibility: hidden;
 }
 .top-btn:hover {

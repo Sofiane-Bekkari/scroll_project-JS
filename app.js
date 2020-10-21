@@ -51,7 +51,7 @@ window.addEventListener('scroll', function() {
     }
 });
 
-//********Scroll Smouth********//
+//**********Scroll Smouth**********//
 const linkScrolling = document.querySelectorAll('.scroll-link');
 
 linkScrolling.forEach(function(link) {
@@ -61,23 +61,32 @@ linkScrolling.forEach(function(link) {
         const element = document.getElementById(id);
         //console.log(id)
         // calculate the heights of nav
+       
         const navHeight = linkContainer.getBoundingClientRect().height; 
-        console.log(navHeight, 'is the nav height')
+        //const navHeadHeight = navHeader.getBoundingClientRect().height; 
+        const navBarHeight = navFix.getBoundingClientRect().height; 
+        //console.log(navHeight, 'is the nav height')
+        //console.log(navHeadHeight, 'is the nav header height')
+        //console.log(navBarHeight, 'is the navbar height')
+
         // add varaible for fixed nav
         const fixedNav = navFix.classList.contains("nav-fixed")
-        console.log(fixedNav,'fixed');
+        //console.log(fixedNav,'fixed');
         let position = element.offsetTop - navHeight;
-        console.log(position, 'is the posistion')
+        //console.log(position, 'is the posistion')
 
+        // STATMENT TO SEE IF IT ON FIXED TO CALCULATE
         if (!fixedNav) {
-            position = position;
+            position = position - navBarHeight;
             console.log(position, "works")
         }
-       //else {
-       //     position = position 
-       // }
-    
-        // add window scrollTo
+        // FOR SMALL SCREEN
+        if (navHeight  > 82 ) {
+            position = position + 114 // ADD IT STATIC
+            console.log(position, "WORKS2")
+        }
+
+        // Window SCROLLTO
         window.scrollTo({
             left:0,
             top: position,
